@@ -8,4 +8,10 @@ for i in range(100):
     szamok.append(szam)
 #Ellenőrizni
 print(szamok)
-print(len(szamok))         
+print(len(szamok)) 
+
+# EGYSZÁM JÁTÉK
+jatek_szam = 0
+nem_talalDB = 0
+kitalalando_szam = szamok[random.randint(len(szamok))]
+        
