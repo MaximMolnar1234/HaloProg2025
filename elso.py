@@ -1,64 +1,56 @@
+"""----------------------------------------------
+    EGYSZÁM JÁTÉK
+----------------------------------------------"""
+
 import random
 
-#Lista létrehozása
+
+# Lista létrehozása
 szamok = []
-#Lista feltöltése 100 db random kétjegyű egész számmal
+
+# Kitalálandó számok listájának feltöltése 100 db, random kétjegyű egész számmal
 for i in range(100):
     szam = random.randint(10, 99)
     szamok.append(szam)
-#Ellenőrizni
-print(szamok)
-print(len(szamok)) 
 
-# EGYSZÁM JÁTÉK
+# Ellenőrzés
+print(szamok)
+
+
+# Változók létrehozása statisztika készítéshez
 jatek_szam = 0
-nem_talalDB = 0
+nem_talaldDB = 0
+
+# A kitalálandó szám kiválasztása a listából
 kitalalando_szam = szamok[random.randint(0, len(szamok))]
 
-#Játék
+
+# A JÁTÉK ---------------------------------------
+kitalalando_szam = 12
 
 jatszol = True
 
-while (jatszol):
-     
-  tipp_sz = input("Tipped?: (egész szám)").strip() 
-  if(tipp_sz.isdecimal()):
-      tipp = int(tipp_sz)
-  else:
-      print("Egész számmal játssz!")
-      continue   
-  
-  while (tipp != kitalalando_szam):
-        tipp_sz = input("Tipped?: (egész szám)").strip() 
+while(jatszol):    
+    tipp_sz = input("Tipped? (egész szám): ").strip()
+    if(tipp_sz.isdecimal()):
+        tipp = int(tipp_sz)
+    else:
+        print("Egész számmal játsz!")
+        continue
+
+    while(tipp != kitalalando_szam):
+        tipp_sz = input("Tipped? (egész szám): ").strip()
         if(tipp_sz.isdecimal()):
             tipp = int(tipp_sz)
         else:
-            print("Egész számmal játssz!")
+            print("Egész számmal játsz!")
             continue
-        
-  print("Eltaláltad a számot!")  
 
-  folytatas = input("Akarsz-e még játszani? [I/N]")
-  if (folytatas == "N"):
-      jatszol = False
-       
-      
+    print("Kitaláltad a kitalálandó számot!")
 
-
-
-""" tipp=int(input("Tipped?: (egész szám)"))
-while (tipp != kitalalando_szam):
-    tipp=int(input("Tipped?: (egész szám)"))
-print("Eltaláltad a számot!")
-
-folytatas = input("Akarsz-e még játszani? [I/N]")
-
-if (folytatas == "I"):
-    #??????????
-    pass
-else:
-    exit()  """
-    
+    folytatas = input("Akarsz-e még játszani? [I/N]")
+    if(folytatas == "N"):
+        jatszol = False
     
           
             
