@@ -77,6 +77,6 @@ while(jatszol):
         print(f"\nJátékok száma: {jatek_szam} Próbálkozások száma: {nem_talaltdDB}")
     elif(folytatas == "I"): 
         jatek_szam+=1    
-    
+
           
             
