@@ -49,9 +49,22 @@ print("Ennyi a pontszámok átlga: ",pontszam/db)
 versenyzo = input("Adj meg egy versenyzőnevet: ")
 
 i=1
-while verseny_adatok[i].split(",")[0]!=versenyzo:
+while (verseny_adatok[i].split(",")[0]!=versenyzo):
     i=i+1
 print(verseny_adatok[i])
+
+# 3. Hány versenyző teljesített 300 pont felett?
+
+db_300_felett=0
+for i in range (1,len(verseny_adatok)):
+    if (int(verseny_adatok[i].split(",")[1])>300):
+        db_300_felett+=1
+print(f"A 300 pont feletti versenyzők száma: {db_300_felett} fő")        
+
+# 4. Van-e 0 pontos versenyző?
+j=0
+while ():
+
 
 
 
