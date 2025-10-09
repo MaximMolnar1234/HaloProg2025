@@ -61,11 +61,25 @@ for i in range (1,len(verseny_adatok)):
         db_300_felett+=1
 print(f"A 300 pont feletti versenyzők száma: {db_300_felett} fő")        
 
-# 4. Van-e 0 pontos versenyző?
-j=0
-while ():
+# 4. Van-e 0 pontos versenyző? (Eldöntés 1)
+j=1
+while j<len(verseny_adatok) and int(verseny_adatok[j].split(",")[1])>0:
+    j+=1
+if (j<len(verseny_adatok)):
+    print("Van 0 pontos versenyző.")
+else: 
+    print("Nincs 0 pontos versenyző.")    
+# 4.2 Mindeki szerzett már pontot?  (Eldöntés 2)      
 
+k=1
+while k<len(verseny_adatok) and int(verseny_adatok[k].split(",")[1])>0:
+    k+=1
+if (k>=len(verseny_adatok)):
+    print("Mindenki szerzett pontot.")
+else:
+    print("Van olyan aki nem szerzett pontot.")       
 
+# 5. Maximumkiválasztás 
 
 
 print("ITT A VÉGE!")    
