@@ -80,7 +80,29 @@ else:
     print("Van olyan aki nem szerzett pontot.")       
 
 # 5. Maximumkiválasztás 
+# 6. Ki az aki 90 pontot szerzett? Keresés (lineráris)
 
+l=1
+
+while l<len(verseny_adatok) and int(verseny_adatok[l].split(",")[1]) !=90:
+    l+=1
+    
+if (l<len(verseny_adatok)):
+    print("A 90 pontos versenyző neve: ",verseny_adatok[l].split(",")[0])    
+else:
+    print("A fájlban nincs olyan versenyző akinek pontosan 90 pontja van")
+
+# 7. Kik a Mercedes versenyzői?
+
+lista = []
+
+
+db2=0
+for i in range (1, len(verseny_adatok)):
+    if (verseny_adatok[i].split(",")[2] == "Mercedes"):
+        lista[db2]=verseny_adatok[i].split(",")[1]
+        db2+=1
+print(lista)
 
 print("ITT A VÉGE!")    
 
