@@ -79,7 +79,18 @@ if (k>=len(verseny_adatok)):
 else:
     print("Van olyan aki nem szerzett pontot.")       
 
-# 5. Maximumkiválasztás 
+
+# 5. Ki vezeti a tabellát? (Maximumkiválasztás)
+max_ertek = int(verseny_adatok[1].split(",")[1])
+max_index = 1
+for i in range(2,len(verseny_adatok)):
+    if (int(verseny_adatok[i].split(",")[1]))>max_ertek:
+        max_index = i
+        max_ertek = int(verseny_adatok[i].split(",")[1])
+print(f"Ő vezet: {verseny_adatok[max_index].split(",")[0]}") 
+       
+
+
 # 6. Ki az aki 90 pontot szerzett? Keresés (lineráris)
 
 l=1
@@ -103,6 +114,7 @@ for i in range (1, len(verseny_adatok)):
         lista[db2]=verseny_adatok[i].split(",")[1]
         db2+=1
 print(lista)
+
 
 print("ITT A VÉGE!")    
 
