@@ -87,7 +87,7 @@ for i in range(2,len(verseny_adatok)):
     if (int(verseny_adatok[i].split(",")[1]))>max_ertek:
         max_index = i
         max_ertek = int(verseny_adatok[i].split(",")[1])
-print(f"Ő vezet: {verseny_adatok[max_index].split(",")[0]}") 
+print(f"Ő vezeti a tabellát: {verseny_adatok[max_index].split(",")[0]}") 
        
 
 
@@ -111,10 +111,28 @@ lista = []
 db2=0
 for i in range (1, len(verseny_adatok)):
     if (verseny_adatok[i].split(",")[2] == "Mercedes"):
-        lista[db2]=verseny_adatok[i].split(",")[1]
+        lista.append(verseny_adatok[i].split(",")[0])
         db2+=1
 print(lista)
 
+# 8. Kik a Stake F1 Team Kick Sauber, illetve a RB F1 Team pilótái?
+
+dby=dbz=0
+
+lista_y = []
+lista_z = []
+
+for i in range (1, len(verseny_adatok)):
+    if (verseny_adatok[i].split(",")[2] == "Stake F1 Team Kick Sauber" or verseny_adatok[i].split(",")[2] == "RB F1 Team"):
+        dby+=1
+        lista_y.append(verseny_adatok[i].split(",")[0])
+    else:
+        dbz+=1
+        lista_z.append(verseny_adatok[i].split(",")[0])
+
+print("Stake F1 Team Kick Sauber pilóták: ",lista_y)
+            
+print("RB F1 Team pilóták: ",lista_z)        
 
 print("ITT A VÉGE!")    
 
