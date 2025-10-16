@@ -134,6 +134,41 @@ print("Stake F1 Team Kick Sauber pilóták: ",lista_y)
             
 print("RB F1 Team pilóták: ",lista_z)        
 
+# 9. Kik az 1950 és 2024 közötti dobogós versenyzők?
+data19 = []
+data20 = []
+
+try:
+    with open("F1_1950-1999.csv", encoding="utf-8") as fajl:
+        
+        for sor in fajl:
+            data19.append(sor)
+
+except IOError as ex:
+    print(f"Fájl megnyitás hiba: {ex}")
+
+try:
+    with open("F1_2000-2024.csv", encoding="utf-8") as fajl:
+        
+        for sor in fajl:
+           data20.append(sor)
+
+except IOError as ex:
+    print(f"Fájl megnyitás hiba: {ex}")
+
+u = []
+for i in range(1, len(data19)):
+    u.append(data19[i])
+    
+for j in range(1, len(data20)):
+    u.append(data20[j])    
+
+for i in u:
+    print(i)
+
+
+
+
 print("ITT A VÉGE!")    
 
 
