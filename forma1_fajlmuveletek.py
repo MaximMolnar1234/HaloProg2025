@@ -166,9 +166,29 @@ for j in range(1, len(data20)):
 for i in u:
     print(i)
 
+# 10. Kik voltak azok a versenyzők, akik a 20. és 21. században is versenyeztek?
+'''
+metszet = []
+db_m = 0
+
+for i in range (1, len(data19)):
+    j = 1
+    while j < len(data20) and data19[i].split(",")[2] != data20[j].split(",")[2]:
+        j += 1
+    if (j < len(data20)):
+        if (data19[i] not in metszet):
+            metszet.append(data19[i].split(",")[2])
+            db_m += 1
 
 
 
+for i in metszet:
+    print(i)        
+'''
+
+
+
+            
 print("ITT A VÉGE!")    
 
 
