@@ -185,7 +185,15 @@ for i in range (1, len(data19)):
 for i in metszet:
     print(i)        
 '''
+# 11. Rendezzük a pontszámok alapján növekvő sorrendbe az adatokat
 
+for i in range (1, len(verseny_adatok) -1 ):
+    for j in range (i+1, len(verseny_adatok)):
+        if int(verseny_adatok[i].split(",")[1]) > int(verseny_adatok[j].split(",")[1]):
+            seged = verseny_adatok[j]
+            verseny_adatok[i] = verseny_adatok[j]
+            verseny_adatok[j] = seged
+print(verseny_adatok)            
 
 
             
